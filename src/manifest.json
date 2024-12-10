@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+
+  "name": "Counter chrome Extension",
+
+  "description": "Counter app Easy to use",
+
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Card Kalisz"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/card.png",
+    "48": "assets/card.png",
+    "128": "assets/card.png"
+  },
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"]
+}
