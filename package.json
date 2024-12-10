@@ -2,6 +2,7 @@
   "name": "flash-card",
   "version": "0.0.0",
   "scripts": {
+    "chrome-extension:build": "npx ts-node scripts/build-chrome-extension.ts",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
